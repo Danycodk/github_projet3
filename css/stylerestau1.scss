@@ -3,7 +3,7 @@
 *{
     margin: 0px;
     padding: 0px;
-    
+    box-sizing: border-box;
 }
 body{
     font-family: 'Roboto', sans-serif;
@@ -77,31 +77,72 @@ article{
         text-underline-offset: 6px;
         text-decoration-color: #99E2D0;  
     }
-     .contain_menu{
+    .contain_menu{
         width: 94%;
         height: 60px;
-        background-color: #ffffff;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        border-radius: 15px;
+        background-color: red;
+        border-bottom-right-radius: 15px;
+        border-top-right-radius: 15px;
         margin: auto;
-        position: relative;
         cursor: pointer;
-        animation: flash 4s linear;
-        transform: scale(1);
-        transition-property: transform;
+        animation: flash 3s linear;
         &:hover {
-            transform: scale(1.15);
+            display: flex;
+            align-items: center; 
+        }
+        &:hover .little_contain_menu{
+            animation:animation_flex_85 5s ease-in-out alternate ;
         }
         &:hover  .fa-circle-check{
-            display:initial;
-            position: relative;
-            width: 15%;
-            height: 100%;
+            width:15%;
+            height:100%;
+            display: flex;
+            text-align: center;
+            align-items: center; 
+            animation:  animation_cercle_checke 5s ease-in-out ;/* RECHECHED CORRECTEMENT LA FONCTION */
         }
+        &:hover .fa-circle-check:before {
+            content: "\f058";
+            margin: auto;
+        }
+        @keyframes animation_cercle_checke{
+            0% {
+                
+                        transform: translateX(100%);
+            }
+              100% {
+              
+                        transform: translateX(0PX);
+              }
+            }
+        @keyframes animation_flex_85{
+            0% {
+              
+                        transform: scaleX(1.15);
+               
+                        transform-origin: 0% ;
+              }
+              100% {
+                
+                        transform: scaleX(1);
+            
+                        transform-origin: 0% ;
+              }
+            }
+        .little_contain_menu{
+             width: 100%;
+             height: 60px;
+           
+             display: flex;
+             flex-direction: column;
+             align-items: center;
+             
+             margin: auto;
+            
+       
        }
-       .contain_menu:nth-child(1){
+    }
+    .contain_menu:nth-child(1){
         animation-delay: 100ms;
     }
     .contain_menu:nth-child(2){
@@ -136,36 +177,36 @@ article{
     }
        @keyframes flash {
         from{
-            transform:translateY(-20px);
+            transform:translateY(-10px);
             opacity:0;
         }
         to{
+            transform:translateY(0px);
             opacity:1;
         }
        }
-        .contain_menu h3{
+        h3{
             width: 96%;
             margin: auto;
+            font-size:16px;
         }
-        .description_prix{
+        .description_prix{ /* mettre les deux p dans un meme p avec du span */
             width: 96%;
             height: 30px;
             display: flex;
             justify-content: space-between;
             margin: auto;
-            font-size: 14px;
-            .fa-circle-check{
-                width: 15%;
-                height: 100%;
-                font-size: 30px;
-                display: none;
-                position:  relative;
-                top:-25px
-                padding-top: 25px;
-                align-items: right;
-                color:#ffffff;
-                background-color: #99E2D0;
-            }
+            font-size: 12px; 
+        }
+        .fa-circle-check{
+            width: 15%;
+            font-size: 20px;
+            display:none;
+            align-items:center ;
+            position:  relative;
+            color: #ffffff;
+            background-color: #99E2D0;
+           
         }
 }
 .button_violet{
