@@ -1,1 +1,72 @@
-/*# sourceMappingURL=style.css.map */
+@import url("https://fonts.googleapis.com/css2?family=Shrikhand&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&display=swap");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+body .all_the_page {
+  width: 100%;
+  margin: auto;
+}
+
+/*----------------HEAD------------------------*/
+/*----------------HEAD------------------------*/
+.head_titre {
+  width: 100%;
+  height: 70px;
+  display: flex;
+  align-items: center;
+}
+.head_titre .logo_titre {
+  height: 30px;
+  width: 40%;
+  margin: auto;
+  background-position: center;
+  background-repeat: no-repeat;
+  -o-object-fit: center;
+     object-fit: center;
+}
+
+.location_and_logo {
+  width: 100%;
+  height: 45px;
+  background-color: #e2e2e2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.location_and_logo .fa-location-dot {
+  padding-right: 4%;
+}
+.navbar {
+  height: 350px;
+  width: 100%;
+  background-color: #f4f4f4;
+}
+.navbar h1 {
+  height: 100px;
+  width: 60%;
+  margin: auto;
+  font-size: 22px;
+  display: flex;
+  align-items: center;
+  text-align: center;
+}
+.navbar p {
+  height: 100px;
+  width: 90%;
+  align-items: center;
+  margin: auto;
+  font-size: 18px;
+  text-align: center;
+}
+.navbar .button_violet {
+  height: 60px;
+  width: 60%;
+  margin: auto;
+}/*# sourceMappingURL=style.css.map */
