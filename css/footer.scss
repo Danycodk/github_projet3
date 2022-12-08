@@ -1,0 +1,32 @@
+/*-------------------------------------------------*/
+/*   FOOTER                                   */
+/*-------------------------------------------------*/
+footer{
+    width: 100%;
+    height: 250px;
+    background-color: #3a3a3a;
+    color: #ffffff;
+    position: absolute;
+    top:1350px;
+    .text_contener{
+        width: 90%;
+        margin: auto;
+    }
+    .text_contener h1{
+        height: 50px;
+        display: flex;
+        align-items: center;
+    }
+    .text_contener p:nth-child(1){
+        height: 30px;
+    }
+    .text_contener p:nth-child(2){
+        height: 30px;
+    }
+    .text_contener p:nth-child(3){
+        height: 30px;
+    }
+    .text_contener p:nth-child(4){
+        height: 30px;
+    }
+}

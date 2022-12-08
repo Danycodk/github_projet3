@@ -1,0 +1,19 @@
+/*-------------------------------------------------*/
+/*    le Head                                      */
+/*-------------------------------------------------*/
+header{
+    width: 94%;
+    height:70px ;
+    display:flex;
+    align-items: center;
+    font-size: 22px;
+    margin:auto ;
+    h1{
+        width: 70%;
+        height:70px ;
+        text-align: center;
+    }
+    i{
+            width: 15%;
+        }
+}
