@@ -1,4 +1,4 @@
-
+@import "variables";
 /*-------------------------------------------------*/
 /*    ARTICLE                                     */
 /*-------------------------------------------------*/
@@ -32,6 +32,7 @@ section{
     }
 }
 article{ 
+   
     .entree{
         height: 40px;
         width:96% ;
@@ -40,34 +41,39 @@ article{
         align-items: center;
         text-decoration: underline;
         text-underline-offset: 6px;
-        text-decoration-color: $vert;  
+        text-decoration-color: $vert ;
     }
     .contain_menu{
         width: 94%;
         height: 60px;
-        background-color: red;
         border-bottom-right-radius: 15px;
         border-top-right-radius: 15px;
         margin: auto;
+        background-color: #ffffff;
+        box-shadow: 0px 10px 20px -14px #000000;
         cursor: pointer;
-        animation: flash 3s linear;
         &:hover {
             display: flex;
-            align-items: center; 
+            align-items: center;  
         }
         &:hover .little_contain_menu{
-            animation:animation_flex_85 3s ease-in-out alternate 1 forwards,
-            animation_flex_85_out 3s ease-in-out 1 forwards;
+       
+            animation:animation_flex_85 3s linear both  ;
+        }
+        &:not(:hover) .little_contain_menu{
+            animation: animation_flex_85_out 3s linear both;
         }
         &:hover  .fa-circle-check{
-            width:15%;
+            width: 15% ;
             height:100%;
             display: flex;
             text-align: center;
             align-items: center; 
-            animation:  animation_cercle_checke 3s ease-in-out 1 forwards,
-            animation_cercle_checke_out 3s ease-in-out 1 forwards;
-        }
+            animation:  animation_cercle_checke 3s linear    both ; 
+       }
+       &:not(:hover) .fa-circle-check{
+        animation: animation_cercle_checke_out 3s linear both ;
+       }
         &:hover .fa-circle-check:before {
             content: "\f058";
             margin: auto;
@@ -82,63 +88,41 @@ article{
             
             margin: auto;
       }
-   }
-   .contain_menu:nth-child(1){
-    animation-delay: 100ms;
-}
-.contain_menu:nth-child(2){
+      h3{
+        width: 96%;
+        margin: auto;
+        font-size:16px;
+    }
+    .description_prix{ /* mettre les deux p dans un meme p avec du span */
+        width: 96%;
+        height: 30px;
+        display: flex;
+        justify-content: space-between;
+        margin: auto;
+        font-size: 12px; 
+    }
+       .fa-circle-check{
+        width: 15%;
+        font-size: 20px;
+        display:none;
+        color: #ffffff;
+        background-color: $vert;
+    }
+    
+&:nth-child(2){
     margin-bottom: 2%;
-    animation-delay: 200ms;
-}
-.contain_menu:nth-child(3){
+    animation: flash 3s linear 0.250s 1 forwards;
+ }
+ &:nth-child(3){
     margin-bottom: 2%;
-    animation-delay: 300ms;
+    animation: flash 3s linear 0.500s 1 forwards;
 }
-.contain_menu:nth-child(4){
-    animation-delay: 400ms;
+&:nth-child(4){
+    margin-bottom: 2% ;
+    animation: flash 3s linear 0.75s 1 forwards;
 }
-.contain_menu:nth-child(5){
-   margin-bottom:2%;
-    animation-delay: 500ms;
-}
-.contain_menu:nth-child(6){
-   margin-bottom: 2%;
-    animation-delay: 600ms;
-}
-.contain_menu:nth-child(7){
-    animation-delay: 700ms;
-}
-.contain_menu:nth-child(8){
-   margin-bottom:2%;
-    animation-delay: 800ms;
-}
-.contain_menu:nth-child(9){
-   margin-bottom: 2%;
-    animation-delay: 900ms;
-}
-h3{
-    width: 96%;
-    margin: auto;
-    font-size:16px;
-}
-.description_prix{ /* mettre les deux p dans un meme p avec du span */
-    width: 96%;
-    height: 30px;
-    display: flex;
-    justify-content: space-between;
-    margin: auto;
-    font-size: 12px; 
-}
-.fa-circle-check{
-    width: 15%;
-    font-size: 20px;
-    display:none;
-    align-items:center ;
-    position:  relative;
-    color: #ffffff;
-    background-color: $vert;
-   
-}
+
+    }
 }
 .button_violet{
 height: 110px;

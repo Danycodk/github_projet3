@@ -46,21 +46,24 @@ article .entree {
 article .contain_menu {
   width: 94%;
   height: 60px;
-  background-color: red;
   border-bottom-right-radius: 15px;
   border-top-right-radius: 15px;
   margin: auto;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px -14px #000000;
   cursor: pointer;
-  -webkit-animation: flash 3s linear;
-          animation: flash 3s linear;
 }
 article .contain_menu:hover {
   display: flex;
   align-items: center;
 }
 article .contain_menu:hover .little_contain_menu {
-  -webkit-animation: animation_flex_85 3s ease-in-out alternate 1 forwards, animation_flex_85_out 3s ease-in-out 1 forwards;
-          animation: animation_flex_85 3s ease-in-out alternate 1 forwards, animation_flex_85_out 3s ease-in-out 1 forwards;
+  -webkit-animation: animation_flex_85 3s linear both;
+          animation: animation_flex_85 3s linear both;
+}
+article .contain_menu:not(:hover) .little_contain_menu {
+  -webkit-animation: animation_flex_85_out 3s linear both;
+          animation: animation_flex_85_out 3s linear both;
 }
 article .contain_menu:hover .fa-circle-check {
   width: 15%;
@@ -68,8 +71,12 @@ article .contain_menu:hover .fa-circle-check {
   display: flex;
   text-align: center;
   align-items: center;
-  -webkit-animation: animation_cercle_checke 3s ease-in-out 1 forwards, animation_cercle_checke_out 3s ease-in-out 1 forwards;
-          animation: animation_cercle_checke 3s ease-in-out 1 forwards, animation_cercle_checke_out 3s ease-in-out 1 forwards;
+  -webkit-animation: animation_cercle_checke 3s linear both;
+          animation: animation_cercle_checke 3s linear both;
+}
+article .contain_menu:not(:hover) .fa-circle-check {
+  -webkit-animation: animation_cercle_checke_out 3s linear both;
+          animation: animation_cercle_checke_out 3s linear both;
 }
 article .contain_menu:hover .fa-circle-check:before {
   content: "\f058";
@@ -83,54 +90,12 @@ article .contain_menu .little_contain_menu {
   align-items: center;
   margin: auto;
 }
-article .contain_menu:nth-child(1) {
-  -webkit-animation-delay: 100ms;
-          animation-delay: 100ms;
-}
-article .contain_menu:nth-child(2) {
-  margin-bottom: 2%;
-  -webkit-animation-delay: 200ms;
-          animation-delay: 200ms;
-}
-article .contain_menu:nth-child(3) {
-  margin-bottom: 2%;
-  -webkit-animation-delay: 300ms;
-          animation-delay: 300ms;
-}
-article .contain_menu:nth-child(4) {
-  -webkit-animation-delay: 400ms;
-          animation-delay: 400ms;
-}
-article .contain_menu:nth-child(5) {
-  margin-bottom: 2%;
-  -webkit-animation-delay: 500ms;
-          animation-delay: 500ms;
-}
-article .contain_menu:nth-child(6) {
-  margin-bottom: 2%;
-  -webkit-animation-delay: 600ms;
-          animation-delay: 600ms;
-}
-article .contain_menu:nth-child(7) {
-  -webkit-animation-delay: 700ms;
-          animation-delay: 700ms;
-}
-article .contain_menu:nth-child(8) {
-  margin-bottom: 2%;
-  -webkit-animation-delay: 800ms;
-          animation-delay: 800ms;
-}
-article .contain_menu:nth-child(9) {
-  margin-bottom: 2%;
-  -webkit-animation-delay: 900ms;
-          animation-delay: 900ms;
-}
-article h3 {
+article .contain_menu h3 {
   width: 96%;
   margin: auto;
   font-size: 16px;
 }
-article .description_prix { /* mettre les deux p dans un meme p avec du span */
+article .contain_menu .description_prix { /* mettre les deux p dans un meme p avec du span */
   width: 96%;
   height: 30px;
   display: flex;
@@ -138,14 +103,27 @@ article .description_prix { /* mettre les deux p dans un meme p avec du span */
   margin: auto;
   font-size: 12px;
 }
-article .fa-circle-check {
+article .contain_menu .fa-circle-check {
   width: 15%;
   font-size: 20px;
   display: none;
-  align-items: center;
-  position: relative;
   color: #ffffff;
   background-color: #99E2D0;
+}
+article .contain_menu:nth-child(2) {
+  margin-bottom: 2%;
+  -webkit-animation: flash 3s linear 0.25s 1 forwards;
+          animation: flash 3s linear 0.25s 1 forwards;
+}
+article .contain_menu:nth-child(3) {
+  margin-bottom: 2%;
+  -webkit-animation: flash 3s linear 0.5s 1 forwards;
+          animation: flash 3s linear 0.5s 1 forwards;
+}
+article .contain_menu:nth-child(4) {
+  margin-bottom: 2%;
+  -webkit-animation: flash 3s linear 0.75s 1 forwards;
+          animation: flash 3s linear 0.75s 1 forwards;
 }
 
 .button_violet {
